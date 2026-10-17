@@ -31,7 +31,7 @@ window.ANNOUNCE = {
   },
 
   /* ---------- This Week at Harlem Temple (the "week" slide) ---------- */
-  // From the Weekly Schedule in the Sunday program. label = what shows in the day column (optional), note = small line under the name.
+  // From the Weekly Schedule in the Sunday program, plus Holiness Service, Harlem Haven, Prayer Meeting and Afterschool (always kept). label = what shows in the day column (optional), note = small line under the name.
   week: [
     { days: "Sun", name: "Children’s Breakfast & Sunday School", start: "9:00 AM" },
     { days: "Sun", name: "Sunday School",                start: "10:00 AM" },
@@ -41,9 +41,12 @@ window.ANNOUNCE = {
     { days: "Wed", name: "Children (Creative) & Teen Bible Study", start: "6:00 PM" },
     { days: "Wed", name: "Adult Bible Study",            start: "6:30 PM", note: "In person & Zoom" },
     { days: "Wed", name: "Senior Rec Program" },
+    { days: "Wed", name: "Harlem Haven for Seniors",     start: "10:00 AM", end: "1:00 PM" },
+    { days: "Wed", name: "Prayer Meeting",               start: "7:30 PM", end: "8:00 PM" },
     { days: "Fri", name: "Music & Arts",                 start: "6:00 PM", end: "8:30 PM", note: "Fall through Spring" },
     { days: "Mon, Tue, Thu, Fri", name: "Food Pantry",   start: "9:30 AM", end: "11:30 AM", note: "By appointment only" },
-    { days: "Mon, Tue, Wed, Thu, Fri", label: "Mon to Fri", name: "Soup Kitchen", start: "11:00 AM", end: "12:30 PM" }
+    { days: "Mon, Tue, Wed, Thu, Fri", label: "Mon to Fri", name: "Soup Kitchen", start: "11:00 AM", end: "12:30 PM" },
+    { days: "Mon, Tue, Wed, Thu, Fri", label: "Mon to Fri", name: "Harlem G.A.I.N.S. Afterschool", start: "2:00 PM", end: "6:00 PM" }
   ],
 
   /* ---------- Slides ---------- */
