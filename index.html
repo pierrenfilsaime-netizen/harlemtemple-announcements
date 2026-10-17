@@ -93,6 +93,29 @@
   .wi.today{background:var(--navy);color:var(--cream);border-color:var(--navy)}
   .wi.today .dd{color:var(--gold)}
 
+  /* birthdays */
+  .s-bday{background:radial-gradient(110% 100% at 85% 0%, #E2363D 0%, var(--red) 45%, var(--red-deep) 100%);color:#fff}
+  .s-bday .kicker{color:var(--gold)}
+  .s-bday .title{font-size:calc(var(--u)*5.8)}
+  .s-bday .rings::before{border-color:#fff;opacity:.12}
+  .confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+  .confetti i{position:absolute;width:calc(var(--u)*1.1);height:calc(var(--u)*.45);border-radius:2px;opacity:.85;animation:drift 9s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:translateY(0) rotate(var(--r))}to{transform:translateY(calc(var(--u)*2.4)) rotate(calc(var(--r) + 60deg))}}
+  .bgrid{display:grid;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:calc(var(--u)*1.2) calc(var(--u)*2);margin-top:calc(var(--u)*3);max-width:calc(var(--u)*84)}
+  .bc{backdrop-filter:blur(8px);display:flex;align-items:center;gap:calc(var(--u)*1.8);padding:calc(var(--u)*1.4) calc(var(--u)*1.8);border-radius:calc(var(--u)*1.2);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+  .bc .bd{flex:none;width:calc(var(--u)*8.4);border-radius:calc(var(--u)*.8);overflow:hidden;text-align:center;box-shadow:0 calc(var(--u)*.5) calc(var(--u)*1.4) rgba(0,0,0,.25)}
+  .bc .bd b{display:block;background:var(--gold);color:var(--navy);font:800 calc(var(--u)*1.05)/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:calc(var(--u)*.7) 0}
+  .bc .bd span{display:block;background:#fff;color:var(--red);font:700 calc(var(--u)*3.6)/1 var(--serif);padding:calc(var(--u)*.7) 0 calc(var(--u)*.9)}
+  .bc .bn{font:700 calc(var(--u)*2.7)/1.1 var(--serif);min-width:0}
+  .bc .bw{display:block;margin-top:calc(var(--u)*.5);font:600 calc(var(--u)*1.3)/1 var(--sans);letter-spacing:.06em;color:var(--gold)}
+  .bc.today{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+  .bc.today .bw{color:var(--red)}
+  .bc.today .bd b{background:var(--navy);color:var(--gold)}
+  .s-bday .body{margin-top:calc(var(--u)*2.6);font-style:italic;font-family:var(--serif)}
+  .s-bday.many .bc .bn{font-size:calc(var(--u)*2.1)}
+  .s-bday.many .bc .bd{width:calc(var(--u)*7)}
+  .s-bday.many .bc .bd span{font-size:calc(var(--u)*2.8)}
+
   /* scripture */
   .s-scripture{background:radial-gradient(110% 90% at 80% 100%, #3A1420 0%, var(--navy) 55%, #0C1528 100%);color:var(--cream)}
   .s-scripture .pad{align-items:center;text-align:center}
@@ -185,6 +208,7 @@
   const fmtTime = mins => { let h = Math.floor(mins/60), m = mins % 60; const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12; return h + (m ? ":" + String(m).padStart(2,"0") : "") + " " + ap; };
 
   function visible(s){
+    if ((s.type || "").toLowerCase() === "birthdays" && !birthdaysNow().length) return false;
     const today = ymd(now());
     if (s.start && today < s.start) return false;
     if (s.end && today > s.end) return false;
@@ -240,6 +264,18 @@
       el.className = "slide s-week t-cream";
       el.innerHTML = `<div class="pad"><div class="kicker">${esc(s.kicker || "Every Week")}</div><div class="title">${esc(s.title || "This Week at Harlem Temple")}</div><div class="wgrid">${items}</div></div>`;
     }
+    else if (type === "birthdays") {
+      const ppl = birthdaysNow();
+      const t = ymd(now());
+      el.className = "slide s-bday" + (ppl.length > 6 ? " many" : "");
+      const cols = ppl.length <= 2 ? ppl.length || 1 : ppl.length <= 6 ? 2 : 3;
+      const colors = ["var(--gold)", "#fff", "var(--cream)", "#F7C95A"];
+      let conf = ""; for (let i = 0; i < 26; i++) conf += `<i style="left:${(i*37)%100}%;top:${(i*53)%60}%;background:${colors[i%4]};--r:${(i*47)%180}deg;animation-delay:-${i%9}s"></i>`;
+      el.innerHTML = `<div class="rings"></div><div class="confetti">${conf}</div><div class="pad"><div class="kicker">${esc(s.kicker || "Happy Birthday")}</div><div class="title">${esc(s.title || "Celebrating You This Week")}</div>` +
+        `<div class="bgrid" style="--cols:${cols}">${ppl.map(p => { const d = parseDate(p.date);
+          return `<div class="bc${p.date === t ? " today" : ""}"><div class="bd"><b>${MON[d.getMonth()]}</b><span>${d.getDate()}</span></div><div class="bn">${esc(p.name)}<span class="bw">${p.date === t ? "Today!" : WD[d.getDay()]}</span></div></div>`; }).join("")}</div>` +
+        `${s.body ? `<div class="body">${esc(s.body)}</div>` : ""}</div>` + bug;
+    }
     else if (type === "scripture") {
       el.className = "slide s-scripture";
       el.innerHTML = `<div class="pad"><div class="quote-mark">&ldquo;</div><div class="verse">${esc(s.text)}</div><div class="cite">${esc(s.cite)}</div></div>`;
@@ -249,6 +285,20 @@
       el.innerHTML = `<video src="${esc(s.media)}" muted playsinline preload="auto"></video>`;
     }
     return el;
+  }
+
+  /* ---------- birthdays (read from the data branch, updated every Sunday) ---------- */
+  let BDAY = null;
+  function birthdaysNow(){
+    if (!BDAY || !BDAY.people) return [];
+    const t = ymd(now());
+    if (BDAY.to && t > BDAY.to) return [];          // week is over, hide until the next update
+    return BDAY.people.filter(p => p.date && p.name).sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : a.name.localeCompare(b.name));
+  }
+  async function loadBirthdays(){
+    const url = (C.birthdays && C.birthdays.feed) || "";
+    if (!url) return;
+    try { const r = await fetch(url + (url.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" }); if (r.ok) BDAY = await r.json(); } catch(e) { /* offline: keep what we have */ }
   }
 
   /* ---------- slideshow ---------- */
@@ -367,11 +417,11 @@
     setInterval(async () => { try { const f = await fingerprint(); if (running === null) running = f; else if (f !== running && !take.classList.contains("on")) location.reload(); } catch(e){} }, 5 * 60e3);
   }
 
-  show(0);
+  // ?slide=3 jumps to a slide, ?pause holds it (handy for previews)
+  if (Q.has("pause")) paused = true;
+  loadBirthdays().finally(() => show(Q.get("slide") ? +Q.get("slide") - 1 : 0));
+  setInterval(loadBirthdays, 30 * 60e3);
   tick(); setInterval(tick, 250);
-  // jump straight to a slide: ?slide=3
-  if (Q.get("slide")) show(+Q.get("slide") - 1);
-  if (Q.has("pause")) { paused = true; show(idx); }
 })();
 </script>
 </body>

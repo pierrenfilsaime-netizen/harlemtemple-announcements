@@ -23,6 +23,13 @@ window.ANNOUNCE = {
   // { name: "Christmas Eve Service", date: "2026-12-24", start: "7:00 PM", end: "8:30 PM", showWithinMinutes: 60, takeoverMinutes: 5 }
   specialServices: [],
 
+  /* ---------- Birthdays ---------- */
+  // Every Sunday morning the church calendar's "- HBD" events for Wednesday to Tuesday are written to this file
+  // (the "data" branch on GitHub, so it doesn't use Netlify credits). The slide hides itself on weeks with no birthdays.
+  birthdays: {
+    feed: "https://raw.githubusercontent.com/pierrenfilsaime-netizen/harlemtemple-announcements/data/birthdays.json"
+  },
+
   /* ---------- This Week at Harlem Temple (the "week" slide) ---------- */
   week: [
     { days: "Sun",                name: "Sunday School",            start: "10:00 AM", end: "11:00 AM" },
@@ -42,6 +49,7 @@ window.ANNOUNCE = {
   //   "announcement": kicker, title, body, date ("2026-11-15"), time, place, theme ("cream" | "navy" | "red"), media (photo behind)
   //   "flyer":        media. Add title / body / date / time / place to show the details beside the flyer.
   //   "week":         the weekly schedule above
+  //   "birthdays":    this week's birthdays from the church calendar
   //   "scripture":    text, cite
   //   "video":        media (mp4), plays muted, moves on when it ends
   // Any slide: duration (seconds), start / end ("2026-11-01") to show and hide on their own.
@@ -57,6 +65,8 @@ window.ANNOUNCE = {
         { when: "11:00 AM", what: "Holiness Service" }
       ],
       body: "Can't be here in person? Worship with us live on YouTube and Facebook." },
+
+    { type: "birthdays", duration: 15, body: "\u201cThe Lord bless you and keep you.\u201d Numbers 6:24" },
 
     { type: "week", duration: 15 },
 
