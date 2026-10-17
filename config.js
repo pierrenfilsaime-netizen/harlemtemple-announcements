@@ -31,17 +31,19 @@ window.ANNOUNCE = {
   },
 
   /* ---------- This Week at Harlem Temple (the "week" slide) ---------- */
+  // From the Weekly Schedule in the Sunday program. label = what shows in the day column (optional), note = small line under the name.
   week: [
-    { days: "Sun",                name: "Sunday School",            start: "10:00 AM", end: "11:00 AM" },
-    { days: "Sun",                name: "Holiness Service",         start: "11:00 AM" },
-    { days: "Sun",                name: "Beginners Band",           start: "1:25 PM" },
-    { days: "Mon, Tue, Thu, Fri", name: "Food Pantry",              start: "9:30 AM",  end: "11:30 AM" },
-    { days: "Weekdays",           name: "Soup Kitchen",             start: "11:00 AM", end: "12:30 PM" },
-    { days: "Weekdays",           name: "Harlem G.A.I.N.S. Afterschool", start: "2:00 PM", end: "6:00 PM" },
-    { days: "Wed",                name: "Harlem Haven for Seniors", start: "10:00 AM", end: "1:00 PM" },
-    { days: "Wed",                name: "Bible Study",              start: "6:30 PM",  end: "7:30 PM" },
-    { days: "Wed",                name: "Prayer Meeting",           start: "7:30 PM",  end: "8:00 PM" },
-    { days: "Fri",                name: "Youth Music and Arts",     start: "6:00 PM",  end: "8:30 PM" }
+    { days: "Sun", name: "Children’s Breakfast & Sunday School", start: "9:00 AM" },
+    { days: "Sun", name: "Sunday School",                start: "10:00 AM" },
+    { days: "Sun", name: "Holiness Service",             start: "11:00 AM" },
+    { days: "Sun", label: "1st & 3rd Sun", name: "Men & Women Ministry", start: "1:30 PM" },
+    { days: "Mon", name: "GNY Railton and YP Music and Creative Arts", start: "6:00 PM", note: "Fall through Spring" },
+    { days: "Wed", name: "Children (Creative) & Teen Bible Study", start: "6:00 PM" },
+    { days: "Wed", name: "Adult Bible Study",            start: "6:30 PM", note: "In person & Zoom" },
+    { days: "Wed", name: "Senior Rec Program" },
+    { days: "Fri", name: "Music & Arts",                 start: "6:00 PM", end: "8:30 PM", note: "Fall through Spring" },
+    { days: "Mon, Tue, Thu, Fri", name: "Food Pantry",   start: "9:30 AM", end: "11:30 AM", note: "By appointment only" },
+    { days: "Mon, Tue, Wed, Thu, Fri", label: "Mon to Fri", name: "Soup Kitchen", start: "11:00 AM", end: "12:30 PM" }
   ],
 
   /* ---------- Slides ---------- */
@@ -61,27 +63,49 @@ window.ANNOUNCE = {
     { type: "announcement", theme: "navy", kicker: "Every Sunday",
       title: "Sunday at Harlem Temple",
       rows: [
+        { when: "9:00 AM",  what: "Children’s Breakfast & Sunday School" },
         { when: "10:00 AM", what: "Sunday School" },
         { when: "11:00 AM", what: "Holiness Service" }
       ],
       body: "Can't be here in person? Worship with us live on YouTube and Facebook." },
 
-    { type: "birthdays", duration: 15, body: "\u201cThe Lord bless you and keep you.\u201d Numbers 6:24" },
+    /* ---- From the Sunday program, Oct 18, 2026 ---- */
+    { type: "announcement", theme: "navy", start: "2026-10-18", end: "2026-10-18", duration: 14,
+      kicker: "This Morning’s Message", title: "Where Is God’s Home?",
+      rows: [
+        { when: "Speaker",   what: "Col. Janet Munn" },
+        { when: "Scripture", what: "Acts 7:44-50" }
+      ] },
 
-    { type: "week", duration: 15 },
+    { type: "announcement", theme: "red", start: "2026-10-18", end: "2026-10-18",
+      kicker: "This Afternoon", title: "Harvest at Bushwick Corps" },
+
+    { type: "birthdays", duration: 15, body: "“The Lord bless you and keep you.” Numbers 6:24" },
+
+    { type: "week", duration: 18 },
 
     { type: "flyer", media: "media/harvest-celebration-2026.jpg", end: "2026-11-15", duration: 15,
       kicker: "Annual Harvest Celebration", title: "Still We Sow",
       date: "2026-11-15", time: "3:00 PM",
       body: "Guest speakers Lt. Colonels David & Margaret Davis." },
 
-    { type: "flyer", media: "media/christmas-toy-distribution.jpg", end: "2026-12-19", duration: 15 },
+    { type: "flyer", media: "media/christmas-toy-distribution.jpg", end: "2026-12-19", duration: 15,
+      kicker: "Christmas Toy Distribution", title: "Applications Now Available",
+      body: "Please see the Captains to sign up." },
+
+    { type: "announcement", theme: "cream", kicker: "From Your Pastors",
+      title: "Officer’s Visitation",
+      body: "The pastors have reserved Fridays to visit and pray with Soldiers. If you would like to be visited, please see one of the pastors to schedule a visitation." },
+
+    { type: "announcement", theme: "navy", end: "2026-12-31", date: "2026-12-31",
+      kicker: "Save the Date", title: "Watch Night Service" },
+
     { type: "flyer", media: "media/music-arts-26-27.jpg", duration: 15 },
     { type: "flyer", media: "media/womens-ministry.jpg", duration: 15 },
     { type: "flyer", media: "media/mens-ministry.jpg", duration: 15 },
 
-    { type: "flyer", media: "media/valentine-gala-tea-2027.jpg", start: "2027-01-04", end: "2027-02-13", duration: 15,
-      kicker: "Save the Date", title: "Valentine Gala & Tea",
+    { type: "flyer", media: "media/valentine-gala-tea-2027.jpg", end: "2027-02-13", duration: 15,
+      kicker: "Annual Tea Party · Save the Date", title: "Valentine Gala & Tea",
       date: "2027-02-13", time: "5:00 PM",
       body: "$30 per person, $50 per couple. Dress to impress." },
 
