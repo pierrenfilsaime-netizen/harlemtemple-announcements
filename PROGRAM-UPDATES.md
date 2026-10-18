@@ -1,6 +1,14 @@
 # Weekly Sunday program update
 
-Every Sunday morning the Sunday program (a Word file emailed with "Sunday Program" in the subject) is used to update `config.js`. These are the rules, set by Captain Neek.
+Every Sunday morning the Sunday program (a Word file emailed with "Sunday Program" in the subject) is used to update the screen. These are the rules, set by Captain Neek.
+
+## Where updates go: the `data` branch, never `main`
+
+Captain Neek wants as few Netlify credits used as possible. Netlify only publishes `main`, so:
+
+- **All content changes** (slides, weekly schedule, service times, new flyers) go in **`content.json` on the `data` branch**, with any new images in `media/` on that branch. Screens pick it up within about 10 minutes. This costs no Netlify credits.
+- `content.json` uses the same fields as the slide and schedule examples in `config.js` (`slides`, `week`, `services`, `specialServices`). Media paths are relative to it (`"media/flyer.jpg"`). Keep it valid JSON.
+- **Push to `main` only for design or code changes** to `index.html` or `config.js`, and only when Captain Neek asks for one. Group several into one push.
 
 ## What to take from the program
 
@@ -12,7 +20,7 @@ Every Sunday morning the Sunday program (a Word file emailed with "Sunday Progra
    - If an existing slide or flyer already covers the event, update that slide instead of adding a new one (for example the Harvest flyer, the Christmas Toy Distribution flyer, the Valentine Gala & Tea flyer which the program calls the "Annual Tea Party").
    - Items that disappear from the program: remove their announcement slide, unless it is a flyer slide or still has a future date.
 3. **Notes like Officer's Visitation**: an announcement using the program's own wording.
-4. **Weekly Schedule** → the `week` list, in the program's order and wording.
+4. **Weekly Schedule** → the `week` list in `content.json`, in the program's order and wording.
    - Always keep, even if the program leaves them out: **Holiness Service** (Sun 11:00 AM), **Harlem Haven for Seniors** (Wed 10:00 AM to 1:00 PM), **Prayer Meeting** (Wed 7:30 PM to 8:00 PM), **Harlem G.A.I.N.S. Afterschool** (Mon to Fri 2:00 PM to 6:00 PM).
    - Leave out items marked "To be announced".
    - Seasonal notes ("Fall through Spring") and "By appointment only" / "In person & Zoom" go in `note`.
@@ -27,6 +35,5 @@ Every Sunday morning the Sunday program (a Word file emailed with "Sunday Progra
 
 ## Publishing
 
-- One commit to `main` per week (each publish uses Netlify credits).
-- Check the page renders (no script errors) before pushing.
-- If nothing changed, don't push.
+- One commit to the `data` branch per week. If nothing changed, don't push.
+- Before pushing, check the page with the new `content.json` (serve a copy locally and point `content.feed` at it): no script errors, and the weekly schedule fits on screen.

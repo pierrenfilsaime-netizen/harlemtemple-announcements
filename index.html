@@ -308,6 +308,29 @@
     try { const r = await fetch(url + (url.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" }); if (r.ok) BDAY = await r.json(); } catch(e) { /* offline: keep what we have */ }
   }
 
+  /* ---------- content (slides, schedule, services) from the data branch: updates cost no Netlify credits ---------- */
+  let contentText = "";
+  function applyContent(text, base){
+    const d = JSON.parse(text);
+    const fix = m => (m && !/^(https?:|data:|\/)/.test(m) && base) ? new URL(m, base).href : m;
+    for (const k of ["services", "specialServices", "week", "slides"]) if (Array.isArray(d[k])) C[k] = d[k];
+    C.slides = (C.slides || []).map(x => x.media ? Object.assign({}, x, { media: fix(x.media) }) : x);
+    contentText = text;
+  }
+  async function loadContent(){
+    const url = (C.content && C.content.feed) || "";
+    if (!url) return;
+    try {
+      const r = await fetch(url + (url.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" });
+      if (!r.ok) throw new Error(r.status);
+      const text = await r.text();
+      if (text !== contentText) { applyContent(text, url); try { localStorage.setItem("ht-content", text); } catch(e){} }
+    } catch(e) {
+      // offline or GitHub hiccup: keep what's showing, or use the last copy this screen saved
+      if (!contentText) { try { const t = localStorage.getItem("ht-content"); if (t) applyContent(t, url); } catch(e2){} }
+    }
+  }
+
   /* ---------- slideshow ---------- */
   let list = [], idx = -1, timer = null, paused = false, cur = null;
   const bar = document.querySelector("#progress i");
@@ -409,7 +432,9 @@
   let idleT; const wake = () => { document.body.classList.remove("idle"); clearTimeout(idleT); idleT = setTimeout(() => document.body.classList.add("idle"), 2500); };
   document.addEventListener("mousemove", wake); wake();
 
-  /* ---------- auto-update: reload when a new version is published ---------- */
+  /* ---------- auto-update: reload when the page itself is republished on Netlify ---------- */
+  // Content changes come from the data branch above; this only catches design changes, so it checks rarely
+  // (every 6 hours) to keep Netlify requests to a minimum.
   async function fingerprint(){
     let s = "";
     for (const f of ["index.html", "config.js"]) {
@@ -421,12 +446,13 @@
   }
   if (location.protocol.startsWith("http") && !Q.has("at")) {
     let running = null; fingerprint().then(f => running = f).catch(() => {});
-    setInterval(async () => { try { const f = await fingerprint(); if (running === null) running = f; else if (f !== running && !take.classList.contains("on")) location.reload(); } catch(e){} }, 5 * 60e3);
+    setInterval(async () => { try { const f = await fingerprint(); if (running === null) running = f; else if (f !== running && !take.classList.contains("on")) location.reload(); } catch(e){} }, 6 * 60 * 60e3);
   }
 
   // ?slide=3 jumps to a slide, ?pause holds it (handy for previews)
   if (Q.has("pause")) paused = true;
-  loadBirthdays().finally(() => show(Q.get("slide") ? +Q.get("slide") - 1 : 0));
+  Promise.all([loadContent(), loadBirthdays()]).finally(() => show(Q.get("slide") ? +Q.get("slide") - 1 : 0));
+  setInterval(loadContent, 10 * 60e3);    // new slides show up on their own, no reload
   setInterval(loadBirthdays, 30 * 60e3);
   tick(); setInterval(tick, 250);
 })();
