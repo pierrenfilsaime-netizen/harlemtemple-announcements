@@ -1,6 +1,6 @@
 {
   "_readme": "Announcements screen content. Edit this on the data branch: the screen picks it up within about 10 minutes, no Netlify publish needed. Rules: PROGRAM-UPDATES.md on main. Media paths are relative to this file (media/...).",
-  "updated": "2026-10-17",
+  "updated": "2026-10-25",
   "services": [
     {
       "name": "Sunday School",
@@ -137,29 +137,21 @@
     {
       "type": "announcement",
       "theme": "navy",
-      "start": "2026-10-18",
-      "end": "2026-10-18",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
       "duration": 14,
       "kicker": "This Morning’s Message",
-      "title": "Where Is God’s Home?",
+      "title": "Even Now",
       "rows": [
         {
           "when": "Speaker",
-          "what": "Col. Janet Munn"
+          "what": "S.S Fred Mbesi"
         },
         {
           "when": "Scripture",
-          "what": "Acts 7:44-50"
+          "what": "Psalm 31:9-15, 24"
         }
       ]
-    },
-    {
-      "type": "announcement",
-      "theme": "red",
-      "start": "2026-10-18",
-      "end": "2026-10-18",
-      "kicker": "This Afternoon",
-      "title": "Harvest at Bushwick Corps"
     },
     {
       "type": "birthdays",
