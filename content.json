@@ -183,6 +183,18 @@
       "body": "Please see the Captains to sign up."
     },
     {
+      "type": "flyer",
+      "media": "media/christmas-show-concert-2026.jpg",
+      "end": "2026-12-20",
+      "duration": 15,
+      "kicker": "Christmas Show & Concert",
+      "title": "What the Herd Heard",
+      "date": "2026-12-20",
+      "time": "3:00 PM",
+      "place": "540 Lenox Ave",
+      "body": "Donation $10.00"
+    },
+    {
       "type": "announcement",
       "theme": "cream",
       "kicker": "From Your Pastors",
