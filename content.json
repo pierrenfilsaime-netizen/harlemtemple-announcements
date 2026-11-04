@@ -1,6 +1,6 @@
 {
   "_readme": "Announcements screen content. Edit this on the data branch: the screen picks it up within about 10 minutes, no Netlify publish needed. Rules: PROGRAM-UPDATES.md on main. Media paths are relative to this file (media/...).",
-  "updated": "2026-10-25",
+  "updated": "2026-11-03T19:11:57-05:00",
   "services": [
     {
       "name": "Sunday School",
@@ -161,6 +161,18 @@
     {
       "type": "week",
       "duration": 18
+    },
+    {
+      "type": "flyer",
+      "media": "media/sunday-worship-2026-11-08.jpg",
+      "end": "2026-11-08",
+      "duration": 15,
+      "kicker": "Sunday Worship",
+      "title": "Encouraged to Grow. Challenged to Live.",
+      "date": "2026-11-08",
+      "time": "11:00 AM",
+      "place": "540 Lenox Ave",
+      "body": "Speaker: Captain Neekenson Fils‑Aime"
     },
     {
       "type": "flyer",
