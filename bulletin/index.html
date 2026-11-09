@@ -51,6 +51,11 @@
   .tools button{appearance:none;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#F7F0E3;border-radius:99px;font:700 .72rem/1 var(--sans);padding:8px 11px;cursor:pointer}
   h1{margin-top:22px;font:700 2.2rem/1.02 var(--serif);letter-spacing:-.01em}
   h1 em{display:block;font-style:italic;font-weight:500;color:var(--gold-soft);font-size:.62em;margin-top:6px}
+  .tithe{display:grid;width:fit-content;grid-template-columns:auto 1fr;align-items:center;column-gap:12px;margin-top:16px;max-width:360px;text-decoration:none;background:var(--gold);color:var(--navy);border-radius:16px;padding:13px 18px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+  .tithe[hidden]{display:none}
+  .tithe svg{grid-row:1 / span 2;width:26px;height:26px}
+  .tithe span{font:800 1.02rem/1.1 var(--sans)}
+  .tithe small{font:600 .76rem/1.2 var(--sans);opacity:.8}
   .date{display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:var(--red);color:#fff;border-radius:99px;padding:8px 14px;font:700 .82rem/1 var(--sans);letter-spacing:.04em}
   .date svg{width:15px;height:15px}
 
@@ -154,6 +159,7 @@
     <div class="tools"><button id="bigBtn" aria-label="Larger text">A+</button></div>
     <h1 id="cname">Harlem Temple<em>Worship Center</em></h1>
     <div class="date" id="date" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span></span></div>
+    <a class="tithe" id="tithe" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><span>Tithes &amp; Offering</span><small>Give with Tithe.ly</small></a>
   </div>
 </header>
 
@@ -227,6 +233,10 @@
       el.querySelector("span").textContent = `${WD[d.getDay()]}, ${MON[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
       el.hidden = false;
     }
+
+    // Tithes & Offering button (top of the page)
+    const tl = (B.links || {}).tithes;
+    if (tl) { const a = document.getElementById("tithe"); a.href = tl; a.hidden = false; }
 
     // message card
     const msg = (B.service || []).find(s => s.message);

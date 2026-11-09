@@ -23,7 +23,7 @@ Each Sunday, rewrite `bulletin.json` completely from that Sunday's program, keep
 - `events`: the Upcoming Events bullets, word for word. `notes`: notes such as Officer's Visitation (`title`, `text`).
 - `schedule`: the program's Weekly Schedule exactly as printed, grouped by its headings (`heading`, optional `note` such as
   "Fall through Spring", `items` with `name`, `time`, optional `note`). Unlike the screen, keep "To be announced" items here.
-- `links`: leave as they are (Watch Live, Give Online, phone).
+- `links`: leave as they are (Watch Live, Give Online, phone, and `tithes`, the Tithe.ly link for the Tithes & Offering button at the top).
 - Flyers on the bulletin come from the current flyer slides in `content.json`, so nothing extra is needed for them.
 - Mirror the program exactly (including spellings); no em dashes.
 
