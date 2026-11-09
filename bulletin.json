@@ -1,24 +1,82 @@
 {
   "_readme": "Sunday Bulletin (harlemtemple-announcements.netlify.app/bulletin/). Rewritten each Sunday from the Sunday program, in the program's own wording and order. Rules: PROGRAM-UPDATES.md on main.",
   "date": "2026-10-25",
-  "name": ["The Salvation Army", "Harlem Temple", "Worship Center"],
+  "name": [
+    "The Salvation Army",
+    "Harlem Temple",
+    "Worship Center"
+  ],
   "service": [
-    { "item": "Preliminary", "who": "HTC Band / P&W" },
-    { "item": "Welcome and Prayer", "who": "S.S Embrya Aponte" },
-    { "item": "Call to Worship", "who": "S.S Jessica Patrice" },
-    { "item": "Opening Song", "number": "#455 / 577", "song": "Blessed Assurance", "who": "S.S Nahiya Traore" },
-    { "item": "Prayer Period", "number": "#314 / 411", "song": "Showers Of Blessing", "who": "Captain Neekenson Fils-Aime" },
-    { "item": "Pastoral Prayer", "who": "Captain Neekenson Fils-Aime" },
-    { "item": "World Service Offering / Tithes & Offering", "who": "S.S Jaden Shaw" },
-    { "item": "Offertory", "who": "HTC Bands" },
-    { "item": "Doxology", "stand": true },
-    { "item": "Announcements", "who": "Captain Neekenson Fils-Aime" },
-    { "item": "Praise & Worship", "who": "HTC Praise Team" },
-    { "item": "Scripture Reading", "scripture": "Psalm 31:9-15, 24", "who": "YPSM. Samantha Veney" },
-    { "item": "Morning Message from the Word", "message": "Even Now", "who": "S.S Fred Mbesi" },
-    { "item": "Time of Reflection" },
-    { "item": "Special Selection", "song": "Im in His Hands", "who": "HTC Youth Chorus" },
-    { "item": "Benediction", "who": "Captain Jeanne-Elie Fils-Aime" }
+    {
+      "item": "Preliminary",
+      "who": "HTC Band / P&W"
+    },
+    {
+      "item": "Welcome and Prayer",
+      "who": "S.S Embrya Aponte"
+    },
+    {
+      "item": "Call to Worship",
+      "who": "S.S Jessica Patrice"
+    },
+    {
+      "item": "Opening Song",
+      "number": "#455 / 577",
+      "song": "Blessed Assurance",
+      "who": "S.S Nahiya Traore"
+    },
+    {
+      "item": "Prayer Period",
+      "number": "#314 / 411",
+      "song": "Showers Of Blessing",
+      "who": "Captain Neekenson Fils-Aime"
+    },
+    {
+      "item": "Pastoral Prayer",
+      "who": "Captain Neekenson Fils-Aime"
+    },
+    {
+      "item": "World Service Offering / Tithes & Offering",
+      "who": "S.S Jaden Shaw"
+    },
+    {
+      "item": "Offertory",
+      "who": "HTC Bands"
+    },
+    {
+      "item": "Doxology",
+      "stand": true
+    },
+    {
+      "item": "Announcements",
+      "who": "Captain Neekenson Fils-Aime"
+    },
+    {
+      "item": "Praise & Worship",
+      "who": "HTC Praise Team"
+    },
+    {
+      "item": "Scripture Reading",
+      "scripture": "Psalm 31:9-15, 24",
+      "who": "YPSM. Samantha Veney"
+    },
+    {
+      "item": "Morning Message from the Word",
+      "message": "Even Now",
+      "who": "S.S Fred Mbesi"
+    },
+    {
+      "item": "Time of Reflection"
+    },
+    {
+      "item": "Special Selection",
+      "song": "Im in His Hands",
+      "who": "HTC Youth Chorus"
+    },
+    {
+      "item": "Benediction",
+      "who": "Captain Jeanne-Elie Fils-Aime"
+    }
   ],
   "events": [
     "Christmas toy applications are now available. Please see the Captains to sign up.",
@@ -27,39 +85,107 @@
     "Annual Tea Party February 13, 2027"
   ],
   "notes": [
-    { "title": "Officer’s Visitation", "text": "The pastors have reserved Fridays to visit and pray with Soldiers. If you would like to be visited, please see one of the pastors to schedule a visitation." }
+    {
+      "title": "Officer’s Visitation",
+      "text": "The pastors have reserved Fridays to visit and pray with Soldiers. If you would like to be visited, please see one of the pastors to schedule a visitation."
+    }
   ],
   "schedule": [
-    { "heading": "Sundays", "items": [
-      { "name": "Children’s Breakfast & Sunday School", "time": "9:00 AM" },
-      { "name": "Sunday School", "time": "10:00 AM" },
-      { "name": "Corps Cadet Class", "time": "To be announced" },
-      { "name": "Junior Band", "time": "To be announced" },
-      { "name": "Men & Women ministry", "time": "1st and 3rd Sunday of every month at 1:30pm" }
-    ]},
-    { "heading": "Mondays", "note": "Fall through Spring", "items": [
-      { "name": "GNY Railton and YP Music and Creative Arts", "time": "6:00 PM" }
-    ]},
-    { "heading": "Wednesdays", "items": [
-      { "name": "Children (Creative) & Teen Bible Study", "time": "6:00 PM" },
-      { "name": "Adult Bible Study", "note": "In Person & Zoom", "time": "6:30PM" },
-      { "name": "Senior Rec Program" }
-    ]},
-    { "heading": "Friday", "note": "Fall through Spring", "items": [
-      { "name": "Music & Arts", "time": "6:00PM-8:30 PM" }
-    ]},
-    { "heading": "Food Pantry", "note": "By appointment only", "items": [
-      { "name": "Monday, Tuesday Thursday and Friday", "time": "9:30 a.m. - 11:30 a.m." }
-    ]},
-    { "heading": "Soup Kitchen", "items": [
-      { "name": "Monday to Friday", "time": "11:00 a.m. - 12:30 p.m." }
-    ]}
+    {
+      "heading": "Sundays",
+      "items": [
+        {
+          "name": "Children’s Breakfast & Sunday School",
+          "time": "9:00 AM"
+        },
+        {
+          "name": "Sunday School",
+          "time": "10:00 AM"
+        },
+        {
+          "name": "Corps Cadet Class",
+          "time": "To be announced"
+        },
+        {
+          "name": "Junior Band",
+          "time": "To be announced"
+        },
+        {
+          "name": "Men & Women ministry",
+          "time": "1st and 3rd Sunday of every month at 1:30pm"
+        }
+      ]
+    },
+    {
+      "heading": "Mondays",
+      "note": "Fall through Spring",
+      "items": [
+        {
+          "name": "GNY Railton and YP Music and Creative Arts",
+          "time": "6:00 PM"
+        }
+      ]
+    },
+    {
+      "heading": "Wednesdays",
+      "items": [
+        {
+          "name": "Children (Creative) & Teen Bible Study",
+          "time": "6:00 PM"
+        },
+        {
+          "name": "Adult Bible Study",
+          "note": "In Person & Zoom",
+          "time": "6:30PM"
+        },
+        {
+          "name": "Senior Rec Program"
+        }
+      ]
+    },
+    {
+      "heading": "Friday",
+      "note": "Fall through Spring",
+      "items": [
+        {
+          "name": "Music & Arts",
+          "time": "6:00PM-8:30 PM"
+        }
+      ]
+    },
+    {
+      "heading": "Food Pantry",
+      "note": "By appointment only",
+      "items": [
+        {
+          "name": "Monday, Tuesday Thursday and Friday",
+          "time": "9:30 a.m. - 11:30 a.m."
+        }
+      ]
+    },
+    {
+      "heading": "Soup Kitchen",
+      "items": [
+        {
+          "name": "Monday to Friday",
+          "time": "11:00 a.m. - 12:30 p.m."
+        }
+      ]
+    }
   ],
-  "pastors": ["Captains Jeanne-Elie and Neekenson Fils-Aime", "LTS. Andremene and Jeanclaude Patrice", "Envoy Kenneth Burton"],
-  "address": ["540 Malcolm X Blvd.", "New York, NY 10037"],
+  "pastors": [
+    "Captains Jeanne-Elie and Neekenson Fils-Aime",
+    "LTS. Andremene and Jeanclaude Patrice",
+    "Envoy Kenneth Burton"
+  ],
+  "address": [
+    "540 Malcolm X Blvd.",
+    "New York, NY 10037"
+  ],
   "links": {
     "live": "https://www.youtube.com/@harlemtemplecorps1348/live",
     "give": "https://give.salvationarmy.org/campaign/806569/donate",
-    "phone": "(212) 862-3900"
+    "phone": "(212) 862-3900",
+    "tithes": "https://tithe.ly/give?c=2544115"
   }
 }
