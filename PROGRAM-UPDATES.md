@@ -10,7 +10,24 @@ Captain Neek wants as few Netlify credits used as possible. Netlify only publish
 - `content.json` uses the same fields as the slide and schedule examples in `config.js` (`slides`, `week`, `services`, `specialServices`). Media paths are relative to it (`"media/flyer.jpg"`). Keep it valid JSON.
 - **Push to `main` only for design or code changes** to `index.html` or `config.js`, and only when Captain Neek asks for one. Group several into one push.
 
-## What to take from the program
+## Sunday Bulletin (`bulletin.json` on the `data` branch)
+
+The bulletin page (harlemtemple-announcements.netlify.app/bulletin/, reached by QR code) is for the congregation's phones, not the screens.
+Each Sunday, rewrite `bulletin.json` completely from that Sunday's program, keeping the existing field shapes:
+
+- `date`: that Sunday (YYYY-MM-DD). `name`, `pastors`, `address`: as printed on the program's cover panel.
+- `service`: the order of service, every line in the program's order and wording. Per line: `item` (the part of the service),
+  `who` (the person or group named), and only when printed: `number` (song numbers like "#455 / 577"), `song` (the song title,
+  without quote marks), `scripture` (the Scripture Reading reference), `message` (the sermon title, on the Morning Message line),
+  `stand: true` when the program says "Please Stand".
+- `events`: the Upcoming Events bullets, word for word. `notes`: notes such as Officer's Visitation (`title`, `text`).
+- `schedule`: the program's Weekly Schedule exactly as printed, grouped by its headings (`heading`, optional `note` such as
+  "Fall through Spring", `items` with `name`, `time`, optional `note`). Unlike the screen, keep "To be announced" items here.
+- `links`: leave as they are (Watch Live, Give Online, phone).
+- Flyers on the bulletin come from the current flyer slides in `content.json`, so nothing extra is needed for them.
+- Mirror the program exactly (including spellings); no em dashes.
+
+## What to take from the program (screens)
 
 1. **Order of service, this Sunday only** (`start` and `end` = that Sunday's date, `theme: "navy"`):
    - "This Morning's Message" slide: title = the sermon title as printed, `rows` for Speaker and Scripture (the Scripture Reading reference).
@@ -35,5 +52,6 @@ Captain Neek wants as few Netlify credits used as possible. Netlify only publish
 
 ## Publishing
 
-- One commit to the `data` branch per week. If nothing changed, don't push.
+- One commit to the `data` branch per week (content.json and bulletin.json together). If nothing changed, don't push.
 - Before pushing, check the page with the new `content.json` (serve a copy locally and point `content.feed` at it): no script errors, and the weekly schedule fits on screen.
+  Check the bulletin too: open `bulletin/?feed=<local copy of the data folder>/` at phone size (390 wide); no script errors and no sideways scrolling.
