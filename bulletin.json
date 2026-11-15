@@ -4,76 +4,82 @@
   "name": [
     "The Salvation Army",
     "Harlem Temple",
-    "Worship Center"
+    "Harvest Celebration"
   ],
   "service": [
     {
-      "item": "Preliminary",
-      "who": "HTC Band / P&W"
+      "item": "Preliminary Music",
+      "who": "Westbury & Harlem Temple Bands"
     },
     {
-      "item": "Welcome and Prayer",
-      "who": "Captain Jeanne-Elie Fils-Aime"
+      "item": "Video"
     },
     {
-      "item": "Call to Worship: Psalm 126",
-      "who": "S.S Lulla Guillaume"
+      "item": "Welcome",
+      "who": "Jason Barton"
     },
     {
-      "item": "Opening Song",
-      "number": "#9/269",
-      "song": "Ye Thankful People, Come",
-      "who": "Lt. Andremene Patrice"
+      "item": "Still Harvesting",
+      "song": "Bringing in the Sheaves",
+      "who": "Tyheem Gregg (Brownsville Corps; kids bring in baskets during song)"
     },
     {
-      "item": "Prayer Period",
-      "song": "Give thanks With A Grateful Heart",
-      "who": "Captain Neekenson Fils-Aime"
+      "item": "Still Spoken",
+      "song": "The Lord of the Harvest",
+      "who": "MJ"
     },
     {
-      "item": "Pastoral Prayer",
-      "who": "Captain Neekenson Fils-Aime"
+      "item": "Still Hitting: Percussion Solo",
+      "who": "Ms. Amy Lee"
     },
     {
-      "item": "Announcements",
-      "who": "Envoy Kenneth Burton"
+      "item": "Still Acting",
+      "song": "Save Me a Seat",
+      "who": "Junior Drama Team"
     },
     {
-      "item": "World Service Offering/Tithes & Offering",
-      "who": "S.S. Ismael Joseph"
+      "item": "Zimbabweans Chorus"
     },
     {
-      "item": "Offertory",
-      "who": "HTC Bands"
+      "item": "Still Touring: Special Selection",
+      "who": "Westbury Band"
     },
     {
-      "item": "Doxology",
-      "stand": true
+      "item": "Still Praising: Praise and Worship with Offering"
     },
     {
-      "item": "Praise & Worship",
-      "who": "HTC Praise Team"
+      "item": "Still Moving",
+      "who": "Harlem Temple Jr. Dance"
     },
     {
-      "item": "Scripture Reading",
-      "who": "S.S. Makomborero Rushwaya"
+      "item": "Still Sharing",
+      "who": "Senior Drama Team"
     },
     {
-      "item": "Morning Message from the Word",
-      "who": "Lt. Colonel Margaret Davis"
+      "item": "Devotional",
+      "who": "Lt. Col. Margaret Davis"
     },
     {
-      "item": "Time of Reflection"
+      "item": "Still Singing",
+      "song": "Harvest Miracles",
+      "who": "HTC Mass Chorus"
     },
     {
-      "item": "Closing Song",
-      "number": "#2/43",
-      "song": "All creatures of our God and King",
-      "who": "Captain Clifford Douglas"
+      "item": "Word of Thanks"
+    },
+    {
+      "item": "Still Going",
+      "song": "Even When it Hurts",
+      "who": "Senior Dance Group"
+    },
+    {
+      "item": "Still Turning",
+      "song": "Turn it Up",
+      "who": "HTC Mass Timbrel"
     },
     {
       "item": "Benediction",
-      "who": "Lt. Jean-Claude Patrice"
+      "who": "Envoy Ken Burton"
     }
   ],
   "events": [
