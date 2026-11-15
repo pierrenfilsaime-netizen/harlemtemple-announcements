@@ -1,0 +1,196 @@
+{
+  "_readme": "Sunday Bulletin (harlemtemple-announcements.netlify.app/bulletin/). Rewritten each Sunday from the Sunday program, in the program's own wording and order. Rules: PROGRAM-UPDATES.md on main.",
+  "date": "2026-11-15",
+  "name": [
+    "The Salvation Army",
+    "Harlem Temple",
+    "Harvest Celebration"
+  ],
+  "service": [
+    {
+      "item": "Preliminary Music",
+      "who": "Westbury & Harlem Temple Bands"
+    },
+    {
+      "item": "Video"
+    },
+    {
+      "item": "Welcome",
+      "who": "Jason Barton"
+    },
+    {
+      "item": "Still Harvesting",
+      "song": "Bringing in the Sheaves",
+      "who": "Tyheem Gregg (Brownsville Corps; kids bring in baskets during song)"
+    },
+    {
+      "item": "Still Spoken",
+      "song": "The Lord of the Harvest",
+      "who": "MJ"
+    },
+    {
+      "item": "Still Hitting: Percussion Solo",
+      "who": "Ms. Amy Lee"
+    },
+    {
+      "item": "Still Acting",
+      "song": "Save Me a Seat",
+      "who": "Junior Drama Team"
+    },
+    {
+      "item": "Zimbabweans Chorus"
+    },
+    {
+      "item": "Still Touring: Special Selection",
+      "who": "Westbury Band"
+    },
+    {
+      "item": "Still Praising: Praise and Worship with Offering"
+    },
+    {
+      "item": "Still Moving",
+      "who": "Harlem Temple Jr. Dance"
+    },
+    {
+      "item": "Still Sharing",
+      "who": "Senior Drama Team"
+    },
+    {
+      "item": "Devotional",
+      "who": "Lt. Col. Margaret Davis"
+    },
+    {
+      "item": "Still Singing",
+      "song": "Harvest Miracles",
+      "who": "HTC Mass Chorus"
+    },
+    {
+      "item": "Word of Thanks"
+    },
+    {
+      "item": "Still Going",
+      "song": "Even When it Hurts",
+      "who": "Senior Dance Group"
+    },
+    {
+      "item": "Still Turning",
+      "song": "Turn it Up",
+      "who": "HTC Mass Timbrel"
+    },
+    {
+      "item": "Benediction",
+      "who": "Envoy Ken Burton"
+    }
+  ],
+  "events": [
+    "Christmas Concert December 20th tickets $10",
+    "Harvest - Today at 3pm",
+    "SET December 5th at 14th street at 5pm tickets $10",
+    "Watch Night service December 31",
+    "Annual Tea Party February 13, 2027"
+  ],
+  "notes": [
+    {
+      "title": "Officer’s Visitation",
+      "text": "The pastors have reserved Fridays to visit and pray with Soldiers. If you would like to be visited, please see one of the pastors to schedule a visitation."
+    }
+  ],
+  "schedule": [
+    {
+      "heading": "Sundays",
+      "items": [
+        {
+          "name": "Children’s Breakfast & Sunday School",
+          "time": "9:00 AM"
+        },
+        {
+          "name": "Sunday School",
+          "time": "10:00 AM"
+        },
+        {
+          "name": "Corps Cadet Class",
+          "time": "To be announced"
+        },
+        {
+          "name": "Junior Band",
+          "time": "To be announced"
+        },
+        {
+          "name": "Men & Women ministry",
+          "time": "1st and 3rd Sunday of every month at 1:30pm"
+        }
+      ]
+    },
+    {
+      "heading": "Mondays",
+      "note": "Fall through Spring",
+      "items": [
+        {
+          "name": "GNY Railton and YP Music and Creative Arts",
+          "time": "6:00 PM"
+        }
+      ]
+    },
+    {
+      "heading": "Wednesdays",
+      "items": [
+        {
+          "name": "Children (Creative) & Teen Bible Study",
+          "time": "6:00 PM"
+        },
+        {
+          "name": "Adult Bible Study",
+          "note": "In Person & Zoom",
+          "time": "6:30PM"
+        },
+        {
+          "name": "Senior Rec Program"
+        }
+      ]
+    },
+    {
+      "heading": "Friday",
+      "note": "Fall through Spring",
+      "items": [
+        {
+          "name": "Music & Arts",
+          "time": "6:00PM-8:30 PM"
+        }
+      ]
+    },
+    {
+      "heading": "Food Pantry",
+      "note": "By appointment only",
+      "items": [
+        {
+          "name": "Monday, Tuesday Thursday and Friday",
+          "time": "9:30 a.m. - 11:30 a.m."
+        }
+      ]
+    },
+    {
+      "heading": "Soup Kitchen",
+      "items": [
+        {
+          "name": "Monday to Friday",
+          "time": "11:00 a.m. - 12:30 p.m."
+        }
+      ]
+    }
+  ],
+  "pastors": [
+    "Captains Jeanne-Elie and Neekenson Fils-Aime",
+    "LTS. Andremene and Jeanclaude Patrice",
+    "Envoy Kenneth Burton"
+  ],
+  "address": [
+    "540 Malcolm X Blvd.",
+    "New York, NY 10037"
+  ],
+  "links": {
+    "live": "https://www.youtube.com/@harlemtemplecorps1348/live",
+    "give": "https://give.salvationarmy.org/campaign/806569/donate",
+    "phone": "(212) 862-3900",
+    "tithes": "https://tithe.ly/give?c=2544115"
+  }
+}

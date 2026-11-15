@@ -1,6 +1,6 @@
 {
   "_readme": "Announcements screen content. Edit this on the data branch: the screen picks it up within about 10 minutes, no Netlify publish needed. Rules: PROGRAM-UPDATES.md on main. Media paths are relative to this file (media/...).",
-  "updated": "2026-11-03T19:11:57-05:00",
+  "updated": "2026-11-14T19:45:00-05:00",
   "services": [
     {
       "name": "Sunday School",
@@ -20,7 +20,16 @@
       "takeoverLine": "Welcome to worship. Please take your seats and silence your phones."
     }
   ],
-  "specialServices": [],
+  "specialServices": [
+    {
+      "name": "Harvest Celebration",
+      "date": "2026-11-15",
+      "start": "3:00 PM",
+      "showWithinMinutes": 60,
+      "takeoverMinutes": 5,
+      "takeoverLine": "Welcome to the Harvest Celebration. Please take your seats and silence your phones."
+    }
+  ],
   "week": [
     {
       "days": "Sun",
@@ -137,21 +146,11 @@
     {
       "type": "announcement",
       "theme": "navy",
-      "start": "2026-10-25",
-      "end": "2026-10-25",
+      "start": "2026-11-15",
+      "end": "2026-11-15",
       "duration": 14,
-      "kicker": "This Morning’s Message",
-      "title": "Even Now",
-      "rows": [
-        {
-          "when": "Speaker",
-          "what": "S.S Fred Mbesi"
-        },
-        {
-          "when": "Scripture",
-          "what": "Psalm 31:9-15, 24"
-        }
-      ]
+      "kicker": "This Morning’s Message · Speaker",
+      "title": "Lt. Colonel Margaret Davis"
     },
     {
       "type": "birthdays",
@@ -164,22 +163,10 @@
     },
     {
       "type": "flyer",
-      "media": "media/sunday-worship-2026-11-08.jpg",
-      "end": "2026-11-08",
-      "duration": 15,
-      "kicker": "Sunday Worship",
-      "title": "Encouraged to Grow. Challenged to Live.",
-      "date": "2026-11-08",
-      "time": "11:00 AM",
-      "place": "540 Lenox Ave",
-      "body": "Speaker: Captain Neekenson Fils‑Aime"
-    },
-    {
-      "type": "flyer",
       "media": "media/harvest-celebration-2026.jpg",
       "end": "2026-11-15",
       "duration": 15,
-      "kicker": "Annual Harvest Celebration",
+      "kicker": "Today · Annual Harvest Celebration",
       "title": "Still We Sow",
       "date": "2026-11-15",
       "time": "3:00 PM",
@@ -204,7 +191,18 @@
       "date": "2026-12-20",
       "time": "3:00 PM",
       "place": "540 Lenox Ave",
-      "body": "Donation $10.00"
+      "body": "Tickets $10"
+    },
+    {
+      "type": "announcement",
+      "theme": "navy",
+      "end": "2026-12-05",
+      "date": "2026-12-05",
+      "kicker": "Save the Date",
+      "title": "SET",
+      "time": "5:00 PM",
+      "place": "14th Street",
+      "body": "Tickets $10"
     },
     {
       "type": "announcement",

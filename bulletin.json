@@ -1,6 +1,6 @@
 {
   "_readme": "Sunday Bulletin (harlemtemple-announcements.netlify.app/bulletin/). Rewritten each Sunday from the Sunday program, in the program's own wording and order. Rules: PROGRAM-UPDATES.md on main.",
-  "date": "2026-10-25",
+  "date": "2026-11-15",
   "name": [
     "The Salvation Army",
     "Harlem Temple",
@@ -13,22 +13,21 @@
     },
     {
       "item": "Welcome and Prayer",
-      "who": "S.S Embrya Aponte"
+      "who": "Captain Jeanne-Elie Fils-Aime"
     },
     {
-      "item": "Call to Worship",
-      "who": "S.S Jessica Patrice"
+      "item": "Call to Worship: Psalm 126",
+      "who": "S.S Lulla Guillaume"
     },
     {
       "item": "Opening Song",
-      "number": "#455 / 577",
-      "song": "Blessed Assurance",
-      "who": "S.S Nahiya Traore"
+      "number": "#9/269",
+      "song": "Ye Thankful People, Come",
+      "who": "Lt. Andremene Patrice"
     },
     {
       "item": "Prayer Period",
-      "number": "#314 / 411",
-      "song": "Showers Of Blessing",
+      "song": "Give thanks With A Grateful Heart",
       "who": "Captain Neekenson Fils-Aime"
     },
     {
@@ -36,8 +35,12 @@
       "who": "Captain Neekenson Fils-Aime"
     },
     {
-      "item": "World Service Offering / Tithes & Offering",
-      "who": "S.S Jaden Shaw"
+      "item": "Announcements",
+      "who": "Envoy Kenneth Burton"
+    },
+    {
+      "item": "World Service Offering/Tithes & Offering",
+      "who": "S.S. Ismael Joseph"
     },
     {
       "item": "Offertory",
@@ -48,39 +51,35 @@
       "stand": true
     },
     {
-      "item": "Announcements",
-      "who": "Captain Neekenson Fils-Aime"
-    },
-    {
       "item": "Praise & Worship",
       "who": "HTC Praise Team"
     },
     {
       "item": "Scripture Reading",
-      "scripture": "Psalm 31:9-15, 24",
-      "who": "YPSM. Samantha Veney"
+      "who": "S.S. Makomborero Rushwaya"
     },
     {
       "item": "Morning Message from the Word",
-      "message": "Even Now",
-      "who": "S.S Fred Mbesi"
+      "who": "Lt. Colonel Margaret Davis"
     },
     {
       "item": "Time of Reflection"
     },
     {
-      "item": "Special Selection",
-      "song": "Im in His Hands",
-      "who": "HTC Youth Chorus"
+      "item": "Closing Song",
+      "number": "#2/43",
+      "song": "All creatures of our God and King",
+      "who": "Captain Clifford Douglas"
     },
     {
       "item": "Benediction",
-      "who": "Captain Jeanne-Elie Fils-Aime"
+      "who": "Lt. Jean-Claude Patrice"
     }
   ],
   "events": [
-    "Christmas toy applications are now available. Please see the Captains to sign up.",
-    "Harvest - November 15th",
+    "Christmas Concert December 20th tickets $10",
+    "Harvest - Today at 3pm",
+    "SET December 5th at 14th street at 5pm tickets $10",
     "Watch Night service December 31",
     "Annual Tea Party February 13, 2027"
   ],
